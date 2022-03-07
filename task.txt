@@ -1,0 +1,61 @@
+Develop a console CLI with 2 arguments:
+
+--letter-counter
+--parse-json-file
+
+Example:
+
+-----------------------------------------------------------------------------------------------------------------
+python mapper.py -h
+usage: mapper.py [-h] [--letter-counter LETTERS] [--parse-json-file JSON_FILE]
+
+
+Task
+
+
+optional arguments:
+-h, --help show this help message and exit
+--letter-counter LETTERS
+Counts every letter occurrence in a given string.
+Returns sorted list
+--parse-json-file JSON_FILE
+Reads given JSON formatted file and outputs flatten
+DICT
+
+––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+When started with argument --letter-counter and passed STRING, the program must count how many times every letter occurs
+in the passed STRING, and create a alphabetically sorted list with elements <char>:<number of occurences>.
+
+Example:
+
+    Execution:
+        python mapper.py --letter-counter 'python syntax is very pretty'
+
+ 
+
+    Result:
+        [' :4', 'a:1', 'e:2', 'h:1', 'i:1', 'n:2', 'o:1', 'p:2', 'r:2', 's:2', 't:4', 'v:1', 'x:1', 'y:4']
+
+
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+When started with argument --parse-json-file and passed path to JSON formatted file the program must transform the content into
+a dict and flatten it. Use the provided json-file.json
+
+Example:
+
+    Execution:
+        python mapper.py --parse-json-file ./json-file.json
+
+
+
+    Result:
+        Nested dict: {u'level1_key2': {u'level2_key2': {u'level3_key1': u'Congrats you have reached the maximum dept of the dict'}, u'level2_key1': u'2'}, u'level1_key1': u'1'}
+
+
+        Flatten dict: {u'level2_key1': u'2', u'level3_key1': u'Congrats you have reached the maximum dept of the dict', u'level1_key1': u'1'}
+
+_____________________________________________________________________________________________________________________
+Requirements:
+
+    --parse-json-file MUST be implemented with recursion!
+    Use python version >=3.7 

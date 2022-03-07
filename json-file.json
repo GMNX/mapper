@@ -1,0 +1,9 @@
+{
+    "level1_key1":"1",
+    "level1_key2":{
+        "level2_key1":"2",
+        "level2_key2":{
+            "level3_key1":"Congrats you have reached the maximum dept of the dict"
+        }
+    }
+}
